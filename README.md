@@ -1,61 +1,91 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# CS 85 - FINAL / "@ProductionPlanner"
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Project Description / Features
+-This software is meant to simulate Production Planning Software. The user enters their Inventory, and then their Products that are made up of Inventory items. From there, the user will then enter a Prodcution Plan (entering how much of the Product they wish to schedule to create). OpenAI will cross reference the inventory with the production plan and alert the user on the amount of inventory they need to procure, if any.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Setup Instructions
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 1. Prerequisites
+- **Windows / Mac** with Laravel Herd installed
+- **Open AI Account and Functional API Key**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 2. Download Files
+- Extract Folder once the files have downloaded.
 
-## Learning Laravel
+### 3. Set Up Environment File
+- Located in the main directory of the downloaded ziped folder, open the file '.env', and scroll to the very end. You should see the following code:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+      # OpenAI Configuration
+      OPENAI_API_KEY=your_openai_api_key_here
+      OPENAI_API_URL=https://api.openai.com/v1
+      OPENAI_MODEL=gpt-3.5-turbo
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+  - Replace 'your_openai_api_key_here' with your unique Open AI API key.
+ 
+### 4. Run The Application WINDOWS
+- Open CMD 
+- Move into your Laravel project folder (type the following code into the CMD)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+      cd C:\YOUR DIRECTORY\project-planner
 
-## Laravel Sponsors
+      Replace 'YOUR DIRECTORY' with the directory where your files have been saved at
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Start the Laravel Server by entering the following code into the CMD:
 
-### Premium Partners
+      php artisan serve
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Enter the following address into your web browser:
 
-## Contributing
+    http://127.0.0.1:8000/
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Troubleshooting
 
-## Code of Conduct
+- If php artisan serve fails, enter the following code:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+          php -S 127.0.0.1:8000 -t public
 
-## Security Vulnerabilities
+- Enter the following address into your web browser:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    http://127.0.0.1:8000/
 
-## License
+### Site Launched
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- With the site now launched, enter a prompt for Open AI to generate a blog post.
+
+
+### 4. Run The Application MAC
+- Open Terminal
+- Move into your Laravel project folder (type the following code into the CMD)
+
+      cd ~/YOUR DIRECTORY/project-planner
+
+      Replace 'YOUR DIRECTORY' with the directory where your files have been saved at
+
+- Start the Laravel Server by entering the following code into the Terminal:
+
+      php artisan serve
+
+- Enter the following address into your web browser:
+
+    http://127.0.0.1:8000/
+
+### Troubleshooting
+
+- If php artisan serve fails, enter the following code:
+
+          php -S 127.0.0.1:8000 -t public
+
+- Enter the following address into your web browser:
+
+    http://127.0.0.1:8000/
+
+### Site Launched
+
+- With the site now launched, you can enter inventory, create a product, and then create a production plan for that product.
+
+ ![1.png](https://github.com/ant-ramz/Final/blob/main/1.png)
+ ![2.png](https://github.com/ant-ramz/Final/blob/main/2.png)
+ ![3.png](https://github.com/ant-ramz/Final/blob/main/3.png)
+ ![4.png](https://github.com/ant-ramz/Final/blob/main/4.png)
